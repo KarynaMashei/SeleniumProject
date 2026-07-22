@@ -8,6 +8,7 @@ public class SeleniumTest {
     WebDriver driver;
     @BeforeMethod
     public void setUp() {
+
         driver = new ChromeDriver();
     }
 
@@ -16,7 +17,7 @@ public class SeleniumTest {
         driver.get("https://google.com");
     }
 
-    @AfterMethod
+    @AfterMethod(enabled = false)
     public void tearDown() {
         driver.quit();
     }

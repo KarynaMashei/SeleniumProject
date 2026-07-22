@@ -18,7 +18,7 @@ public class SeleniumTestHomework {
         driver.navigate().back();
     }
 
-    @AfterMethod
+    @AfterMethod(enabled = false)
     public void tearDown() {
         driver.quit();
     }
