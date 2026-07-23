@@ -17,38 +17,37 @@ public class FindElementsHomework {
 
     @Test
     public void findTenElements() {
-        // --- 4 элемента по имени тэга (tagName) ---
-        WebElement link = driver.findElement(By.tagName("a"));
-        System.out.println("tagName a: " + link.getText());
 
-        WebElement listItem = driver.findElement(By.tagName("li"));
-        System.out.println("tagName li: " + listItem.getText());
-
-        WebElement image = driver.findElement(By.tagName("img"));
-        System.out.println("tagName img: " + image.getAttribute("src"));
-
-        WebElement input = driver.findElement(By.tagName("input"));
-        System.out.println("tagName input: " + input.getAttribute("type"));
-
-        // --- 3 элемента по id ---
-        WebElement searchBox = driver.findElement(By.id("small-searchterms"));
-        System.out.println("id small-searchterms: " + searchBox.getAttribute("id"));
-
-        WebElement cartLink = driver.findElement(By.id("topcartlink"));
-        System.out.println("id topcartlink: " + cartLink.getText());
-
-        WebElement loginLink = driver.findElement(By.className("ico-login"));
-        System.out.println("id-подобный (по классу) ico-login: " + loginLink.getText());
-
-        // --- 3 элемента по className ---
         WebElement headerLogo = driver.findElement(By.className("header-logo"));
-        System.out.println("className header-logo: " + headerLogo.getAttribute("class"));
+        System.out.println("header-logo: " + headerLogo.getText());
 
         WebElement headerLinks = driver.findElement(By.className("header-links"));
-        System.out.println("className header-links: " + headerLinks.getAttribute("class"));
+        System.out.println("header-links: " + headerLinks.getText());
 
-        WebElement loginByClass = driver.findElement(By.className("ico-login"));
-        System.out.println("className ico-login: " + loginByClass.getAttribute("class"));
+        WebElement registerLink = driver.findElement(By.className("ico-register"));
+        System.out.println("ico-register: " + registerLink.getText());
+
+        WebElement loginLink = driver.findElement(By.className("ico-login"));
+        System.out.println("ico-login: " + loginLink.getText());
+
+        WebElement searchBox = driver.findElement(By.className("search-box"));
+        System.out.println("search-box: " + searchBox.getText());
+
+        WebElement searchInput = driver.findElement(By.className("search-box-text"));
+        System.out.println("search-box-text: " + searchInput.getAttribute("type"));
+
+        WebElement searchButton = driver.findElement(By.className("search-box-button"));
+        System.out.println("search-box-button: " + searchButton.getAttribute("value"));
+
+        WebElement headerMenu = driver.findElement(By.className("header-menu"));
+        System.out.println("header-menu: " + headerMenu.getText());
+
+        WebElement topMenu = driver.findElement(By.className("top-menu"));
+        System.out.println("top-menu: " + topMenu.getText());
+
+        WebElement footer = driver.findElement(By.className("footer"));
+        System.out.println("footer: " + footer.getText());
+
     }
 
     @AfterMethod
